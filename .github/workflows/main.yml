@@ -1,0 +1,13 @@
+# .github/workflows/hello.yml
+# Simplest GitHub Actions workflow: prints "Hello World!" on every push
+
+name: hello-world            # Workflow name (shown in the Actions tab)
+
+'on': push                   # Event: run on every push to the repository
+
+jobs:                        # List of jobs in this workflow
+  my-job:                    # Job ID (any name you choose)
+    runs-on: ubuntu-latest   # Runner: a fresh Ubuntu machine from GitHub
+    steps:                   # Tasks inside the job, run in order
+      - name: my-step        # Step label (shown in the logs)
+        run: echo "Hello World!"   # Shell command to execute
